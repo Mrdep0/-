@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keyork — Telegram-канал</title>
+    <title>Мистер ДЕП — Telegram-канал</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-            background-size: 400% 400%;
-            animation: gradient 15s ease infinite;
+            background: #121212;
             color: white;
             text-align: center;
             margin: 0;
@@ -18,77 +16,97 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            overflow: hidden;
+            position: relative;
         }
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+        body::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(40,40,40,0.8) 0%, rgba(20,20,20,1) 70%);
+            animation: rotate 20s linear infinite;
+            z-index: -1;
+        }
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
         .container {
             max-width: 600px;
             padding: 2rem;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
+            background: rgba(30, 30, 30, 0.8);
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255,255,255,0.1);
+            backdrop-filter: blur(5px);
         }
         h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
+            color: #fff;
+            text-shadow: 0 2px 10px rgba(0,150,255,0.5);
         }
         .instructions {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 1rem;
+            background: linear-gradient(135deg, #0066ff 0%, #00ccff 100%);
+            padding: 1.5rem;
             border-radius: 10px;
             margin-bottom: 1.5rem;
-            font-size: 1rem;
+            font-size: 1.1rem;
             text-align: left;
+            box-shadow: 0 5px 20px rgba(0,100,255,0.3);
+            border-left: 5px solid #fff;
+            color: white;
         }
         .instructions strong {
             display: block;
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
+            margin-bottom: 0.7rem;
+            font-size: 1.3rem;
             color: #fff;
         }
         .btn {
             display: inline-block;
-            padding: 12px 30px;
-            background: white;
-            color: #6e8efb;
+            padding: 14px 32px;
+            background: linear-gradient(135deg, #00ccff 0%, #0066ff 100%);
+            color: white;
             text-decoration: none;
             border-radius: 50px;
             font-weight: bold;
-            font-size: 1.1rem;
-            transition: transform 0.3s, box-shadow 0.3s;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,100,255,0.4);
         }
         .btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 25px rgba(0,100,255,0.6);
+            background: linear-gradient(135deg, #00a2ff 0%, #0055ff 100%);
         }
-        .logo {
-            width: 100px;
-            height: 100px;
+        .avatar {
+            width: 120px;
+            height: 120px;
             margin: 0 auto 1.5rem;
-            background: white;
             border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 2rem;
-            font-weight: bold;
-            color: #6e8efb;
+            object-fit: cover;
+            border: 3px solid rgba(0,150,255,0.7);
+            box-shadow: 0 5px 20px rgba(0,100,255,0.5);
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="logo">K</div>
-        <h1>Keyork</h1>
+        <!-- Замените src на ссылку на ваше фото -->
+        <img src="https://via.placeholder.com/120" alt="Мистер ДЕП" class="avatar">
+        
+        <h1>Мистер ДЕП</h1>
         
         <div class="instructions">
-            <strong>Важная информация:</strong>
-            1. Нажмите на три полоски (справа вверху) и выберите "открыть в браузере".<br>
-            2. После этого все ссылки будут работать корректно, и вы сможете подписаться на Telegram-канал.
+            <strong>❗ ВАЖНАЯ ИНФОРМАЦИЯ:</strong>
+            1. Нажмите на три полоски (справа вверху) и выберите "открыть в браузере"<br>
+            2. После этого все ссылки будут работать корректно
         </div>
         
         <a href="https://t.me/keyork" class="btn">Перейти в Telegram →</a>

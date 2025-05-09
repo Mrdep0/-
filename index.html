@@ -7,7 +7,9 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
             color: white;
             text-align: center;
             margin: 0;
@@ -16,6 +18,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
         .container {
             max-width: 600px;
@@ -29,10 +36,19 @@
             font-size: 2.5rem;
             margin-bottom: 1rem;
         }
-        p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
+        .instructions {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            text-align: left;
+        }
+        .instructions strong {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            color: #fff;
         }
         .btn {
             display: inline-block;
@@ -62,31 +78,19 @@
             font-weight: bold;
             color: #6e8efb;
         }
-    body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-    color: white;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-@keyframes gradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
+    </style>
 </head>
 <body>
     <div class="container">
         <div class="logo">K</div>
         <h1>Keyork</h1>
-        <p>Подпишитесь на мой Telegram-канал о технологиях, программировании и жизни.</p>
+        
+        <div class="instructions">
+            <strong>Важная информация:</strong>
+            1. Нажмите на три полоски (справа вверху) и выберите "открыть в браузере".<br>
+            2. После этого все ссылки будут работать корректно, и вы сможете подписаться на Telegram-канал.
+        </div>
+        
         <a href="https://t.me/keyork" class="btn">Перейти в Telegram →</a>
     </div>
 </body>
